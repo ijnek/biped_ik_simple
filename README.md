@@ -14,7 +14,7 @@ source /home/ijnek/workspaces_ros2/ros2_boldbot_ws/install/local_setup.bash
 
 Run walk:
 ```
-ros2 run walk walk --ros-args -p ankle_z:=-0.25
+run walk walk --ros-args -p ankle_z:=-0.26 -p period:=0.25 -p foot_lift_amp:=0.010
 ```
 
 Run biped_ik_simple:
