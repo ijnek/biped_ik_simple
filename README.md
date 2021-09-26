@@ -1,5 +1,7 @@
 # Inverse kinematics for a simple biped
 
+## This package is under heavy development, and is not ready for use.
+
 [![Build and Test (foxy)](../../actions/workflows/build_and_test_foxy.yaml/badge.svg)](../../actions/workflows/build_and_test_foxy.yaml)
 [![Build and Test (galactic)](../../actions/workflows/build_and_test_galactic.yaml/badge.svg)](../../actions/workflows/build_and_test_galactic.yaml)
 [![Build and Test (rolling)](../../actions/workflows/build_and_test_rolling.yaml/badge.svg)](../../actions/workflows/build_and_test_rolling.yaml)
@@ -9,12 +11,6 @@ This package uses just the IK from [Rhoban/IKWalk](https://github.com/Rhoban/IKW
 ![](https://github.com/Rhoban/IKWalk/blob/master/Docs/humanoid.png?raw=true)
 
 ## Instructions
-
-In all workspaces:
-```
-source /home/ijnek/workspaces_ros2/rep_120_ws/install/local_setup.bash
-source /home/ijnek/workspaces_ros2/ros2_boldbot_ws/install/local_setup.bash
-```
 
 Run walk:
 ```
