@@ -3,3 +3,36 @@
 [![Build and Test (foxy)](../../actions/workflows/build_and_test_foxy.yaml/badge.svg)](../../actions/workflows/build_and_test_foxy.yaml)
 [![Build and Test (galactic)](../../actions/workflows/build_and_test_galactic.yaml/badge.svg)](../../actions/workflows/build_and_test_galactic.yaml)
 [![Build and Test (rolling)](../../actions/workflows/build_and_test_rolling.yaml/badge.svg)](../../actions/workflows/build_and_test_rolling.yaml)
+
+## Instructions
+
+In all workspaces:
+```
+source /home/ijnek/workspaces_ros2/rep_120_ws/install/local_setup.bash
+source /home/ijnek/workspaces_ros2/ros2_boldbot_ws/install/local_setup.bash
+```
+
+Run walk:
+```
+ros2 run walk walk --ros-args -p ankle_z:=-0.25
+```
+
+Run biped_ik_simple:
+```
+ros2 run biped_ik_simple biped_ik_simple
+```
+
+Launch boldbot bringup:
+```
+ros2 launch boldbot_sim boldbot_sim_bringup.launch.py
+```
+
+Launch rviz2:
+```
+rviz2
+```
+
+Run twist teleop:
+```
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=target
+```
