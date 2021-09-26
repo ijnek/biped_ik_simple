@@ -1,0 +1,3 @@
+[submodule "external/IKWalk"]
+	path = external/IKWalk
+	url = https://github.com/Rhoban/IKWalk.git
