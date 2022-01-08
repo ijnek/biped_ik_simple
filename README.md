@@ -15,7 +15,6 @@ This package uses just the IK from [Rhoban/IKWalk](https://github.com/Rhoban/IKW
 First install the packages for the tutorial. In your workspace, run:
 
 ```
-git clone git@gitlab.com:boldhearts/ros2_cm730.git src/mx_joint_controller_msgs --recursive
 git clone git@gitlab.com:ijnek/ros2_cm730.git src/ros2_cm730 --single-branch --branch ijnek-fixes-for-galactic --recursive
 git clone git@github.com:ijnek/biped_ik_simple.git src/biped_ik_simple --recursive
 vcs import src < src/biped_ik_simple/dependencies.repos --recursive
