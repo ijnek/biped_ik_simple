@@ -48,7 +48,7 @@ BipedIKSimpleNode::BipedIKSimpleNode()
       bool successLeft = model->legIkLeft(
         posLeft, angleLeft, Leph::EulerRollPitchYaw, outputs);
       if (!successLeft) {
-        RCLCPP_ERROR(get_logger(), "Left Invesrse Kinematics Failed, can't reach position.");
+        RCLCPP_ERROR(get_logger(), "Left Inverse Kinematics Failed, can't reach position.");
       }
 
       // Run inverse invert kinematics on right leg
@@ -57,7 +57,7 @@ BipedIKSimpleNode::BipedIKSimpleNode()
       bool successRight = model->legIkRight(
         posRight, angleRight, Leph::EulerRollPitchYaw, outputs);
       if (!successRight) {
-        RCLCPP_ERROR(get_logger(), "Right Invesrse Kinematics Failed, can't reach position.");
+        RCLCPP_ERROR(get_logger(), "Right Inverse Kinematics Failed, can't reach position.");
       }
 
       RCLCPP_DEBUG(get_logger(), "Finished IK, publishing joint commands");
