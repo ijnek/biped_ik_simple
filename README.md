@@ -10,7 +10,15 @@ This package uses just the IK from [Rhoban/IKWalk](https://github.com/Rhoban/IKW
 
 ![](https://github.com/Rhoban/IKWalk/blob/master/Docs/humanoid.png?raw=true)
 
-## Instructions
+## Tutorial
+
+First install the packages for the tutorial. In your workspace, run:
+
+```
+git clone git@github.com:ijnek/biped_ik_simple.git src/biped_ik_simple --recursive
+git clone mx_joint_controller_msgs --recursive
+git clone git@gitlab.com:ijnek/ros2_cm730.git --single-branch --branch ijnek-fixes-for-galactic --recursive
+```
 
 Run walk:
 ```
