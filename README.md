@@ -22,7 +22,7 @@ Run biped_ik_simple:
 ros2 run biped_ik_simple biped_ik_simple
 ```
 
-Launch boldbot bringup:
+Launch boldbot bringup (https://gitlab.com/boldhearts/ros2_boldbot):
 ```
 ros2 launch boldbot_sim boldbot_sim_bringup.launch.py
 ```
