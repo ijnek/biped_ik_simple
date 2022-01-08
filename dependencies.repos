@@ -3,3 +3,11 @@ repositories:
     type: git
     url: https://github.com/ijnek/biped_interfaces.git
     verson: rolling
+  ros2_cm730:
+    type: git
+    url: https://gitlab.com/ijnek/ros2_cm730.git
+    version: ijnek-fixes-for-galactic
+  ros2_boldbot:
+    type: git
+    url: https://gitlab.com/ijnek/ros2_boldbot.git
+    version: ijnek-fixes-for-galactic
