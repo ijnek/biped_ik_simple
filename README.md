@@ -24,7 +24,7 @@ colcon build
 
 Run walk:
 ```
-run walk walk --ros-args -p ankle_z:=-0.26 -p period:=0.25 -p foot_lift_amp:=0.010
+ros2 run walk walk --ros-args -p ankle_z:=-0.26 -p period:=0.25 -p foot_lift_amp:=0.010
 ```
 
 Run biped_ik_simple:
