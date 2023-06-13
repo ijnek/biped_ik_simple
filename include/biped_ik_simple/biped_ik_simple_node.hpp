@@ -19,7 +19,7 @@
 #include <memory>
 #include <tuple>
 #include "rclcpp/rclcpp.hpp"
-#include "biped_interfaces/msg/ankle_poses.hpp"
+#include "biped_interfaces/msg/sole_poses.hpp"
 #include "mx_joint_controller_msgs/msg/joint_command.hpp"
 #include "IKWalk/HumanoidModel.hpp"
 
@@ -31,7 +31,7 @@ public:
 private:
   std::unique_ptr<Leph::HumanoidModel> model;
 
-  rclcpp::Subscription<biped_interfaces::msg::AnklePoses>::SharedPtr sub_ankle_poses;
+  rclcpp::Subscription<biped_interfaces::msg::SolePoses>::SharedPtr sub_sole_poses;
 
   // TODO(ijnek): Generalise this for other JointCommands
   rclcpp::Publisher<mx_joint_controller_msgs::msg::JointCommand>::SharedPtr pub_joints;

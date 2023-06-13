@@ -34,17 +34,17 @@ BipedIKSimpleNode::BipedIKSimpleNode()
   RCLCPP_DEBUG(get_logger(), "  distFeetLateral : %f", distFeetLateral);
 
   // Subscriptions
-  sub_ankle_poses =
-    create_subscription<biped_interfaces::msg::AnklePoses>(
-    "motion/ankle_poses", 1,
-    [this](biped_interfaces::msg::AnklePoses::SharedPtr ankle_poses) {
-      RCLCPP_DEBUG(get_logger(), "Received AnklePoses");
+  sub_sole_poses =
+    create_subscription<biped_interfaces::msg::SolePoses>(
+    "motion/sole_poses", 1,
+    [this](biped_interfaces::msg::SolePoses::SharedPtr sole_poses) {
+      RCLCPP_DEBUG(get_logger(), "Received SolePoses");
 
       Rhoban::IKWalkOutputs outputs;
 
       // Run inverse invert kinematics on left leg
       RCLCPP_DEBUG(get_logger(), "Calculating Left Leg IK");
-      auto [posLeft, angleLeft] = convertPoseToVectors(ankle_poses->l_ankle, true);
+      auto [posLeft, angleLeft] = convertPoseToVectors(sole_poses->l_sole, true);
       bool successLeft = model->legIkLeft(
         posLeft, angleLeft, Leph::EulerRollPitchYaw, outputs);
       if (!successLeft) {
@@ -53,7 +53,7 @@ BipedIKSimpleNode::BipedIKSimpleNode()
 
       // Run inverse invert kinematics on right leg
       RCLCPP_DEBUG(get_logger(), "Calculating Right Leg IK");
-      auto [posRight, angleRight] = convertPoseToVectors(ankle_poses->r_ankle, false);
+      auto [posRight, angleRight] = convertPoseToVectors(sole_poses->r_sole, false);
       bool successRight = model->legIkRight(
         posRight, angleRight, Leph::EulerRollPitchYaw, outputs);
       if (!successRight) {
